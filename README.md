@@ -12,7 +12,7 @@
 ## Description
 A fictional website that allows users to cho0se a pizza size, pizza toppings and crust of their preference. It then claculates the total cost and insert address information for a delivery
 
- ![Screenshot] <img src="assets/delanihome.png" width="100%" height="100%">
+ ![Screenshot] <img src="screenshot img/Screenshot from 2022-03-21 00-18-35.png">
 
 ## Technology Used
 * HTML
@@ -23,9 +23,9 @@ A fictional website that allows users to cho0se a pizza size, pizza toppings and
 ## Requirements
 * A good internet connection
 ## set up instruction and installation
- clone this repository to a folder https://github.com/rossyvee/week-3-ip-delani-studio
+ clone this repository to a folder git@github.com:rossyvee/Week4IP-BeyondPizaa.git
  Extract the cloned file
- Open terminal command line then navigate to the folder of the application. cd week-3-ip
+ Open terminal command line then navigate to the folder of the application. cd BEYONDPIZZA
  open index.html on your web browser
 
 
