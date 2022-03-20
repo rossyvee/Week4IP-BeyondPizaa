@@ -17,4 +17,16 @@
     margin: auto;
 }
 
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    color: turquoise;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
 
