@@ -1,0 +1,18 @@
+.heading {
+  padding: 20px;
+  text-align: center;
+}
+
+body {
+  background-image: url("/images/background-image.jpg");
+}
+
+.tr-thead {
+  background: cadetblue;
+  color: #fff;
+}
+
+form#customer-order-form {
+  border: 1px solid #5f9ea040;
+  border-radius: 20px;
+}
