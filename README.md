@@ -1,5 +1,5 @@
 # Beyond PIzza
-- A Description of a fictional studio
+- A Description of a fictional website
 ## Table of Content
 + [Description](#description)
 + [Installation Requirement]( Requisites)
@@ -30,13 +30,15 @@ A fictional website that allows users to cho0se a pizza size, pizza toppings and
 
 
 ## Behaviour Drive and DEvelopment
-* [x] Displays Form For Entering Name, email and message
-INPUT: "User's Name Entered"
-INPUT: "User's Email address Entered"
-INPUT: "Message Entered"
+* [x] Displays Form For Entering Name, pizza size
+* [x]INPUT: "User's select medium , small or large"
+* [x]INPUT: "User's select pizza topings"
+* [x]OUTPUT:"A user is alowed to select more than 1 toppings"
+INPUT: "Name and loctaion added after selection"
 OUTPUT: "Displays a thank you for contacting us message"
 * [x] Displays a submit failed pop up if Input is Left Blank
-INPUT: ""
+INPUT: "User selects the pizza he would like to order customizing it with options for size, crust and toppings."
+OUTPUT: "A price breakdown and grand total price will appear as well as a checkout button to confirm order."
 OUTPUT: "Displays Error Message"
 * [x] Displays an Error Message if email address is invalid
 INPUT: "if the name address is empty"
