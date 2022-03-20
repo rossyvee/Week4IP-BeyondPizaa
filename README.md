@@ -46,10 +46,10 @@ INPUT: "if the name address is empty"
 Clears Form and Reset the Message on Click
 * [x] INPUT: "Click Reset Button"
 OUTPUT: "Clears and Resets the Form"
-[live-link]( https://github.com/rossyvee/week-3-ip-delani-studio)
+[live-link](https://github.com/rossyvee/Week4IP-BeyondPizaa)
 ## Reference
   ### The reference materials used in this project can be accessed though this link
-  * [Resource](https://moringaschool.instructure.com/courses/586/assignments/9282?module_item_id=53248)
+  * [Resource](https://moringaschool.instructure.com/courses/586/assignments/9284?confetti=true&submitted=0)
   ## Licence
 MIT License
 Copyright (c) [2022] [Roseline Akinyi]
