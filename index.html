@@ -1,50 +1,137 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
-  <title>BeyondPizza</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inspiration&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  
+
 </head>
-<div class="main">
-  <div class="navbar">
-    <div class="icon">
-      <h2 class="logo">BeyondPizza</h2>
+
+<body class="d-flex flex-column h-100">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top  " style="background-color: #5f9ea0;">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="" href="#">Beyond Pizza</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">View Pizzas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li><a class="nav-link" href="#about">Cart <span style="background-color: #222e17;"
+                  class="badge badge-success">3</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container pt-4 mt-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h1 style="font-family: 'Inspiration', cursive; font-weight:lighter">Place your order</h1>
+
+          <form action="#" method="post" id="customer-order-form" onsubmit="event.preventDefault(); placeCustomerOrder()" class="form p-4" style="border: 2px solid #5f9ea040; border-radius: 20px;">
+            <div class="form-group">
+              <label for="size" class="label mb-1">Size</label>
+              <select name="size" required id="size" class="form-control">
+                <option value="">--select--</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+              </select>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="crust" class="label mb-1">Crust</label>
+              <select name="crust" id="crust" required class="form-control">
+                <option value="">--select--</option>
+                <option value="Crispy">Crispy</option>
+                <option value="Stuffed">Stuffed</option>
+                <option value="Gluten-free">Gluten-free</option>
+              </select>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="toppings" class="label mb-1">Toppings</label>
+              <select name="toppings[]" id="toppings" class="form-control select-2" multiple="multiple">
+                <option value="Roasted Tomatoes">Roasted Tomatoes</option>
+                <option value="Onions">Onions</option>
+                <option value="Cheese">Cheese</option>
+                <option value="Meat">Meat</option>
+                <option value="Olives">Olives</option>
+                <option value="peppers">peppers</option>
+              </select>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="numberOfPizza" class="label mb-1">How many pizzas do you want?</label>
+              <input type="number" id="numberOfPizza" class="form-control" min="1" required/>
+            </div>
+
+            <div class="form-group mt-4">
+              <button type="submit" class="btn btn-sm btn-primary">
+                Place Order
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <div class="menu">
-      <ul>
-        <li><a href="#">Pizza</a></li>
-        <li><a href="#">Toppings</a></li>
-        <li><a href="#">Crust</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Place sticky footer content here.</span>
     </div>
-
-    <div class="search">
-      <input class="srch" type="search" name="" placeholder="Pizza">
-      <a href="#"><button class="btn">Search</button></a>
-      <input class="srch" type="search" name="" placeholder="Toppings">
-      <a href="#"><button class="btn">Search</button></a>
-      <input class="srch" type="search" name="" placeholder="Crust">
-      <a href="#"><button class="btn">Search</button></a>
+  </footer>
 
 
+  <script src="/scripts/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="/scripts/bootstrap.min.js" crossorigin="anonymous"></script>
 
+  
+    <script>
+      // initialize select 2
 
+      $('select.select-2').select2();
+    </script>
+</body>
 
-
-
-    </div>
-
-  </div>
-</div>
+</html>
 
 
 
@@ -53,22 +140,15 @@
 
 
 
-
-
-<body>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="./scripts/script.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./scripts/script.js"></script>
 </body>
 
 </html>
