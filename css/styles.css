@@ -5,7 +5,7 @@
 
 .main {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0,0,0.5)50%, rgba(0, 0,0,0.5)50%)url(./images/pizza.jpg);
+    background-image: url("./images/pizza.jpg");
     background-position: center;
     background-size: cover;
     height: 109vh;
@@ -24,7 +24,7 @@
 }
 
 .logo {
-    color: turquoise;
+    color: brown;
     font-size: 35px;
     font-family: sans-serif;
     padding-left: 20px;
@@ -56,10 +56,14 @@ ul li{
 
 ul li a{
     text-decoration: none;
-    color: #fff;
+    color:brown;
     font-family: Arial;
     font-weight: bold;
-    
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: blue:
 }
 
 
