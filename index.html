@@ -22,7 +22,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   
-
+  <link href="/css/styles.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -47,8 +47,8 @@
 
           </ul>
           <ul class="navbar-nav navbar-right">
-            <li><a class="nav-link" href="#about">Cart <span style="background-color: #222e17;"
-                  class="badge badge-success">3</span></a></li>
+            <li><a class="nav-link mr-3" href="#about">Cart items <span style="background-color: #222e17;"
+                  class="badge badge-success" id="total-cart-items">0</span></a></li>
           </ul>
         </div>
       </div>
@@ -56,13 +56,13 @@
   </header>
 
   <!-- Begin page content -->
-  <main class="flex-shrink-0">
-    <div class="container pt-4 mt-5">
+  <main class="row" style="margin-top: 5%;">
+    <div class="col-md-10 mx-auto col-sm-12 p-5 mb-5" style="background-color: #f8f9faf2;border-radius: 10px;">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <h1 style="font-family: 'Inspiration', cursive; font-weight:lighter">Place your order</h1>
+          <h1 class="heading">Place your order</h1>
 
-          <form action="#" method="post" id="customer-order-form" onsubmit="event.preventDefault(); placeCustomerOrder()" class="form p-4" style="border: 2px solid #5f9ea040; border-radius: 20px;">
+          <form action="#" method="post" id="customer-order-form" onsubmit="event.preventDefault(); placeCustomerOrder()" class="form p-4">
             <div class="form-group">
               <label for="size" class="label mb-1">Size</label>
               <select name="size" required id="size" class="form-control">
@@ -102,19 +102,84 @@
 
             <div class="form-group mt-4">
               <button type="submit" class="btn btn-sm btn-primary">
-                Place Order
+                Add to cart
               </button>
             </div>
 
           </form>
         </div>
+
+        <div class="col-md-6 col-sm-12">
+          <h1 class="heading">Cart Items</h1>
+          <div class="table-responsive w-100">
+            <table class="table w-100 p-3">
+              <thead>
+                <tr class="table-info">
+                  <td>#</td>
+                  <td>Pizza Size</td>
+                  <td>Crust</td>
+                  <td>Toppings</td>
+                  <td>Quantity</td>
+                  <td>Unit Cost</td>
+                  <td>Total Cost</td>
+                  <td>Action</td>
+                </tr>
+              </thead>
+
+              <tbody id="tbody-cart-items">
+                <tr>
+                  <td colspan="8" class="text-center tex-info">No items in cart</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="7" class="text-left">Total Cost</td>
+                  <td>  <span class="text-right" id="total-charges">0</span></td>
+                </tr>
+              </tfoot>
+          </table>
+          </div>
+
+        </div>
       </div>
+
+      
+      <div class="row mt-4 " id="checkout-section" style="display: none;">
+        <hr>
+        <form action="#" onsubmit="event.preventDefault(); checkout()" class="form row">
+
+          <div class="form-group col-md-6 col-sm-12" >
+            <label for="delivery" class="label mb-2">Do you want the pizza delivered to your home?</label>
+            <select name="delivery" required class="form-control" id="delivery" onchange="toggleDeliveryTextField(this.value)">
+              <option value="">--select--</option>
+              <option value="YES">YES</option>
+              <option value="NO">NO</option>
+            </select>
+          </div>
+
+          <div id="div-delivery-location" class="form-group col-md-6 col-sm-12" style="display: none;">
+            <label for="delivery" class="label mb-2">Do you want the pizza delivered to your home?</label>
+            <textarea name="delivery-location" id="delivery-location"  class="form-control"></textarea>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-12  mt-4 mb-2">
+            <p id="deliver-charges"> </p>
+            <p> Total charges  <span class="mr-4" id="checkout-total-charges"></span> </p>
+            <button type="submit" class="btn btn-lg btn-success">Checkout</button>
+          </div>
+
+        </form>
+      </div>
+
+
+
     </div>
   </main>
 
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
-      <span class="text-muted">Place sticky footer content here.</span>
+      <span class="text-muted">Beyond pizza &copy; 2022</span>
     </div>
   </footer>
 
