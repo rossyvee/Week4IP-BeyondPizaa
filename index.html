@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inspiration&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  
+
   <link href="/css/styles.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
@@ -62,7 +62,8 @@
         <div class="col-md-6 col-sm-12">
           <h1 class="heading">Place your order</h1>
 
-          <form action="#" method="post" id="customer-order-form" onsubmit="event.preventDefault(); placeCustomerOrder()" class="form p-4">
+          <form action="#" method="post" id="customer-order-form"
+            onsubmit="event.preventDefault(); placeCustomerOrder()" class="form p-4">
             <div class="form-group">
               <label for="size" class="label mb-1">Size</label>
               <select name="size" required id="size" class="form-control">
@@ -97,7 +98,7 @@
 
             <div class="form-group mt-4">
               <label for="numberOfPizza" class="label mb-1">How many pizzas do you want?</label>
-              <input type="number" id="numberOfPizza" class="form-control" min="1" required/>
+              <input type="number" id="numberOfPizza" class="form-control" min="1" required />
             </div>
 
             <div class="form-group mt-4">
@@ -135,23 +136,24 @@
               <tfoot>
                 <tr>
                   <td colspan="7" class="text-left">Total Cost</td>
-                  <td>  <span class="text-right" id="total-charges">0</span></td>
+                  <td> <span class="text-right" id="total-charges">0</span></td>
                 </tr>
               </tfoot>
-          </table>
+            </table>
           </div>
 
         </div>
       </div>
 
-      
+
       <div class="row mt-4 " id="checkout-section" style="display: none;">
         <hr>
         <form action="#" onsubmit="event.preventDefault(); checkout()" class="form row">
 
-          <div class="form-group col-md-6 col-sm-12" >
+          <div class="form-group col-md-6 col-sm-12">
             <label for="delivery" class="label mb-2">Do you want the pizza delivered to your home?</label>
-            <select name="delivery" required class="form-control" id="delivery" onchange="toggleDeliveryTextField(this.value)">
+            <select name="delivery" required class="form-control" id="delivery"
+              onchange="toggleDeliveryTextField(this.value)">
               <option value="">--select--</option>
               <option value="YES">YES</option>
               <option value="NO">NO</option>
@@ -160,12 +162,12 @@
 
           <div id="div-delivery-location" class="form-group col-md-6 col-sm-12" style="display: none;">
             <label for="delivery" class="label mb-2">Do you want the pizza delivered to your home?</label>
-            <textarea name="delivery-location" id="delivery-location"  class="form-control"></textarea>
+            <textarea name="delivery-location" id="delivery-location" class="form-control"></textarea>
           </div>
 
           <div class="form-group col-md-12 col-sm-12  mt-4 mb-2">
             <p id="deliver-charges"> </p>
-            <p> Total charges  <span class="mr-4" id="checkout-total-charges"></span> </p>
+            <p> Total charges <span class="mr-4" id="checkout-total-charges"></span> </p>
             <button type="submit" class="btn btn-lg btn-success">Checkout</button>
           </div>
 
@@ -188,12 +190,12 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="/scripts/bootstrap.min.js" crossorigin="anonymous"></script>
 
-  
-    <script>
-      // initialize select 2
 
-      $('select.select-2').select2();
-    </script>
+  <script>
+    // initialize select 2
+
+    $('select.select-2').select2();
+  </script>
 </body>
 
 </html>
