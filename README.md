@@ -10,9 +10,9 @@
 + [Authors Info](#aut)
 
 ## Description
-A fictional website that allows users to cho0se a pizza size, pizza toppings and crust of their preference. It then claculates the total cost and insert address information for a delivery
+A fictional website that allows users to choose a pizza size, pizza toppings and crust of their preference. It then claculates the total cost and insert address information for a delivery
 
- ![Screenshot] <img src="screenshot img/Screenshot from 2022-03-21 00-18-35.png">
+ ![Screenshot] (<img src="screenshot img/Screenshot from 2022-03-21 00-18-35.png">)
 
 ## Technology Used
 * HTML
